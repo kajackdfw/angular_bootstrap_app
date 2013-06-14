@@ -1,0 +1,64 @@
+<br />
+
+<div class='well span6'>
+<div class='tabbable' >
+	<ul class='nav nav-tabs' style='margin-bottom: 0px;'>
+		<li class='{{tab_0}}' ><a href='#/about_us/tab/0'>Why This</a></li>
+		<li class='{{tab_1}}' ><a href='#/about_us/tab/1'>Todo List</a></li>
+		<li class='{{tab_2}}' ><a href='#/about_us/tab/2'>Credits</a></li>
+		<li class='{{tab_3}}' ><a href='#/about_us/tab/3'>About</a></li>
+	</ul>
+</div>
+
+
+<div class='tab-content'><div class='tab-pane active'>
+	<ng-switch on='tabId'>
+	
+		<span ng-switch-default >
+			<ul>
+				<li><b>AngularJS</b> : 2 way data binding for your single page application.</li>
+				<li><b>Twitter Bootstrap</b> : One of the fastest evolving Responsive CSS libraries.</li>
+				<li><b>No JQuery</b> : DOM scripting would compete with AngularJS or Bootstrap</li>
+			</ul>
+		</span>
+
+		<span ng-switch-when='1'>
+			<h3>Planned Additions To This Demo</h3>
+			<ul>
+				<li>Live data service calls in the models folder.</li>
+				<li>User Authentication and session initiation</li>
+				<li>Backend / Server side code in the server_side folder</li>
+				<li>????</li> 
+			</ul><br />		
+		</span>
+
+		<span ng-switch-when='2'>
+			<h3>Thanks to Dan Menard</h3>
+			After reading several books, and viewing several MVC patterns online, I decided I liked the pattern as described
+			in the book <b>Instant AngularJS Starter</b> by <u><i>Dan Menard</i></u> at 
+			<a href='http://www.amazon.com/Instant-AngularJS-Starter-Dan-Menard/dp/1782166769/ref=sr_1_1?ie=UTF8&qid=1371085123&sr=8-1&keywords=instant+angularjs+starter'>Amazon</a>
+			. It places all of the code in the folders named model, view, and controller . I did not want to throw every java script into a 
+			js folder. In this app, I did add a fourth folder called lib, for angular.js and bootstrap.js run time scripts. 
+			<h3>Coder for this site : Kajackdfw</h3>
+			This demo was written by <a href='https://github.com/kajackdfw'>kajackdfw</a> . Having a background 
+			in JQuery UI design, I did not want to be dependant on plugins or libraries versions that may get ported at
+			irregular or infrequent intervals, compared to the AngularJS project. I developed this tabbed interface using 
+			AngularJS Methods in my page routing code and plain Twitter Bootstrap. Both stock AngularJS page routing and 
+			JQuery tabbed interfaces use the # symbol in the url, so my method in this demo integrates tab controlls and 
+			page urls together, with no url conflicts or JQuery.
+		</span>
+
+		<span ng-switch-when='3'>
+			<h3>SeeddApp 6/14/2013 version</h3>
+			
+
+			
+			
+		</span>
+	
+	</ng-switch>
+</div></div>
+
+
+</div> <!-- end of well -->
+

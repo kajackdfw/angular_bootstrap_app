@@ -1,0 +1,31 @@
+<br />
+<ul>
+	<li ng-repeat='link in links | orderBy:"title"'>
+		<a href="{{link.url}}" target="_blank" ><b>{{link.title}}</b></a>
+		<p>{{link.summary}}</p>
+		<p>
+			<a href='#/link/{{link.id}}'>
+				<ng-switch on='link.notes.length'>
+					<span ng-switch-when='0'>
+						
+					</span>
+					<span ng-switch-when='1'>
+						<button class="btn btn-medium">View Note</button>
+					</span>
+					<span ng-switch-default >
+						<button class="btn btn-medium">View All {{link.notes.length}} Notes</button>
+					</span>
+				</ng-switch>
+			</a>
+			 
+			<a href='#/addNote/{{link.id}}'><button class="btn btn-medium">Add Note</button></a>
+		</p>
+		<gb-note-list
+			notes='link.notes' 
+			show='link.id == selectedLinkId' 
+			order-by='id' 
+			delete-note-handler='onDelete' 
+		/>
+	</li>
+<ul>
+
