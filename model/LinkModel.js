@@ -3,7 +3,7 @@ SeedApp.service('LinkModel', function() {
 		return [{
 				id: 1,
 				title: 'AngularJS Home',
-				url: 'https://angularjs.org'
+				url: 'http://angularjs.org'
 			}, {
 				id: 2,
 				title: 'Angular UI',
