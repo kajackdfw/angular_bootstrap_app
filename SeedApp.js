@@ -1,5 +1,17 @@
 var newConfig = function($routeProvider) { 
-	$routeProvider
+	
+	if ( $routeProvider.sKey == '' ) {
+		
+		$routeProvider
+		.when('/', {
+			controller: 'LinksController',
+			templateUrl: 'view/home.html'
+		})
+		.otherwise({redirectTo:'/'});
+	}
+	else {
+		
+		$routeProvider
 		.when('/', {
 			controller: 'LinksController',
 			templateUrl: 'view/home.html'
@@ -36,7 +48,9 @@ var newConfig = function($routeProvider) {
 			controller: 'DeleteNoteController',
 			templateUrl: 'view/forms/addNote.html'
 		})
-	;
+		.otherwise({redirectTo:'/'});
+	}
+	
 };
 
 var SeedApp = angular.module('SeedApp',[]).config(newConfig);
