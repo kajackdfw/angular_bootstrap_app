@@ -7,9 +7,9 @@ Dan Menard. His book describes in detail most of the basic methods used in this 
 
 
 ### Learning Steps
-# The book "Instant AngularJS Starter" by Dan Menard
-# This Demo to practice Bootstrap and cloning pages ( extends Instant AngularJS Starter code sample )
-# The book  Angularjs Web Application Development ( Setup a test driven dev environment with NodeJS )
+- The book "Instant AngularJS Starter" by Dan Menard
+- This Demo to practice Bootstrap and cloning pages ( extends Instant AngularJS Starter code sample )
+- The book  Angularjs Web Application Development ( Setup a test driven dev environment with NodeJS )
 
 
 For a preview
