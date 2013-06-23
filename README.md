@@ -1,8 +1,8 @@
-Recommended AngularJS Learning Steps For A traditional Perl/PHP/.Net Web Developer
+Recommended AngularJS Learning Steps For Apache2 environment ( no nodeJS ) Web Developers
 ---------------
 - The book "Instant AngularJS Starter" by Dan Menard
 - This Demo to practice Bootstrap and cloning pages ( extends Instant AngularJS Starter code sample )
-- The book  Angularjs Web Application Development ( Setup a test driven dev environment on Node )
+- The book  Angularjs Web Application Development ( Setup a test driven dev environment with NodeJS )
 
 
 About This Demo / Site Template
@@ -28,4 +28,5 @@ goto http://www.estimutt.com/SeedApp.html
 - Static data models ( No Rest Server yet, coming soon.)
 - Twitter Bootstrap UI / CSS
 - Simple View Controller
+
 
