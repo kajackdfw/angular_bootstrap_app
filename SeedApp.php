@@ -83,26 +83,73 @@
 <script> $('.dropdown-toggle').dropdown() </script>
 
 
-	<!-- This is an angular form UNTIL it has been submitted! Then it will be treated as a HTTP post form by PHP -->
+	<!-- This is only an angular form UNTIL it has been submitted! Then it will be treated as a HTTP post form on the server side -->
+	<div ng-hide="sKey"><br /></div>
+	<!-- Server Side directed form -->
+	<div class='well span6' ng-hide='sKey' >
+		<form name='loginUserForm' action='SeedApp.php' method="post" >
+			<div class='row-fluid'>
+			<div class='span2'>Email : </div><div class='span2'><input type='email' name='login_email' ng-model='userEmail'    required /></div>
+			</div>
+    
+			<div class='row-fluid'>
+			<div class='span2' >Password : </div><div class='span2'><input type='password' name='login_password' ng-model='userPassword' required ng-password /></div>
+			</div>
+    
+			<div class='row-fluid'>
+			<div class='span2'></div><div class='span2'><button ng-disabled='!loginUserForm.$valid' class='btn btn-medium' >Sign In</button></div>
+			</div>
+		</form>
+	</div>
 
+	
+	<!-- Client Side processed form with Rest service authorization -->
+	<div ng-hide="sKey"><br /></div>
+	<!-- Server Side directed form -->
+	<div class='well span6' ng-hide='sKey' >
+			<div class='row-fluid'>
+			<div class='span2'>Email : </div><div class='span2'><input type='email' name='login_email' ng-model='userEmail'    required /></div>
+			</div>
+    
+			<div class='row-fluid'>
+			<div class='span2' >Password : </div><div class='span2'><input type='password' name='login_password' ng-model='userPassword' required ng-password /></div>
+			</div>
+    
+			<div class='row-fluid'>
+			<div class='span2'></div><div class='span2'>
+				<button ng-disabled='!loginUserForm.$valid' class='btn btn-medium' >Sign In</button>
+			</div>
+			</div>
+	</div>	
+	
 	<br />
-<div class='well span6' ng-hide='sKey' >
-  <form name='loginUserForm' action='SeedApp.php' method="post" >
-	<div class='row-fluid'>
-    <div class='span2'>Email : </div><div class='span2'><input type='email' name='login_email' ng-model='userEmail'    required /></div>
+	<div class='well span6' ng-hide='sKey' >
+	<form name="form" novalidate class="login-form">
+    <div class="modal-header">
+        <h4>Sign in</h4>
     </div>
-    
-    <div class='row-fluid'>
-    <div class='span2' >Password : </div><div class='span2'><input type='password' name='login_password' ng-model='userPassword' required ng-password /></div>
+    <div class="modal-body">
+        <div class="alert alert-warning" ng-show="authReason">
+            {{authReason}}
+        </div>
+        <div class="alert alert-error" ng-show="authError">
+            {{authError}}
+        </div>
+        <div class="alert alert-info">Please enter your login details</div>
+        <label>E-mail</label>
+        <input name="login" type="email" ng-model="user.email" required autofocus>
+        <label>Password</label>
+        <input name="pass" type="password" ng-model="user.password" required>
     </div>
-    
-    <div class='row-fluid'>
-    <div class='span2'></div><div class='span2'><button ng-disabled='!loginUserForm.$valid' class='btn btn-medium' >Sign In</button></div>
+    <div class="modal-footer">
+        <button class="btn btn-primary login" ng-click="login()" ng-disabled='form.$invalid'>Sign in</button>
+        <button class="btn clear" ng-click="clearForm()">Clear</button>
+        <button class="btn btn-warning cancel" ng-click="cancelLogin()">Cancel</button>
     </div>
-  </form>
-</div>
-
-
+	</form>
+	</div>
+	
+	
 <div ng-view>
 	<!-- Views are added here at runtime -->
 	<table height="100%" ><tr><td width="100%" height="100%" align="center" valign="center">
