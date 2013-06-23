@@ -1,5 +1,7 @@
-Recommended AngularJS Learning Steps For Apache2 environment ( no nodeJS ) Web Developers
+Recommended AngularJS Learning Steps 
 ---------------
+.... for Apache2 environment ( no nodeJS ) Web Developers
+
 - The book "Instant AngularJS Starter" by Dan Menard
 - This Demo to practice Bootstrap and cloning pages ( extends Instant AngularJS Starter code sample )
 - The book  Angularjs Web Application Development ( Setup a test driven dev environment with NodeJS )
