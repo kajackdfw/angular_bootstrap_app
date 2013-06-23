@@ -12,7 +12,13 @@ $app->put('/v1/user/login/:login_email', function ( $login_email ) use ($app) {
 
 $app->get('/v1/user/login/:login_email/:login_password', function ( $login_email, $login_password ) use ($app) {
 
-	$app->render(array('sid' => '0', 'email' => $login_email , 'password' => $login_password ));
+	require_once( '/var/www/backend/session_manager.php' );
+	$sessionManager = new SessionManagement ;
+	$sKey = $sessionManager->startSession( $login_password, $login_email ) ;
+	unset( $sessionManager );
+	$app->render(array( 'sKey' => $sKey , 
+						'first_name' => $_SESSION['user']['first_name'],
+						'last_name'  => $_SESSION['user']['last_name'] ));
 });
 
 
