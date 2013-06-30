@@ -17,14 +17,16 @@
 	<script src='SeedApp.js'></script>
 	<script src='controller/LinksController.js'></script>
 	<script src='controller/NotesController.js'></script>
+	<!-- script src='controller/LoginController.js'></script -->
 	<script src='model/NoteModel.js'></script>
 	<script src='model/LinkModel.js'></script>
+	<!-- script src='model/UserModel.js'></script -->
 	<!-- script src='model/ui_sample_data.js'></script -->
 	<script src='view/directives/NoteList.js'></script>
 </head>
 
 
-<body style="padding:4px; cellpadding:4px;" >
+<body style="padding:4px; cellpadding:4px;" ng-init=" sKey = '' " >
 
 
 <div class='navbar-inverse' >
@@ -33,8 +35,8 @@
 			<img src='view/image/AngularJS-Shield-tiny.png' alt='some_text' />ngularJS + Twitter_Bootstrap
 		</div>
 		
-		
-		<div class="dropdown span2" >
+
+		<div class="dropdown span2 ng-hide: sKey == '' " >
 			<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#/home.html">
 			<button type="button" class="btn btn-large btn-danger" >Explore!</button></a>
 			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
@@ -53,7 +55,37 @@
 	</div>
 </div>
 
+
 <script> $('.dropdown-toggle').dropdown() </script>
+
+
+<br />
+<div class='well span6' ng-hide='sKey' >
+	<form name="form" novalidate class="login-form">
+    <div class="modal-header">
+        <h4>Sign in</h4>
+    </div>
+    <div class="modal-body">
+        <div class="alert alert-warning" ng-show="authReason">
+            {{authReason}}
+        </div>
+        <div class="alert alert-error" ng-show="authError">
+            {{authError}}
+        </div>
+        <!-- div class="alert alert-info">Please enter your login details</div -->
+        <label>E-mail</label>
+        <input name="login" type="email" ng-model="user.email" required autofocus>
+        <label>Password</label>
+        <input name="pass" type="password" ng-model="user.password" required>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary login" ng-click="login()" ng-disabled='form.$invalid'>Sign in</button>
+        <button class="btn clear" ng-click="clearForm()">Clear</button>
+        <button class="btn btn-warning cancel" ng-click="cancelLogin()">Cancel</button>
+    </div>
+	</form>
+</div>
+	
 
 <div ng-view>
 	<!-- Views are added here at runtime -->
