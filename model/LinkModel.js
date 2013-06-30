@@ -1,4 +1,5 @@
 SeedApp.service('LinkModel', function() {
+	
 	this.getLinks = function() {
 		return [{
 				id: 1,
