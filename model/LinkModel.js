@@ -6,8 +6,8 @@ SeedApp.service('LinkModel', function() {
 				url: 'https://angularjs.org'
 			}, {
 				id: 2,
-				title: 'Angular UI',
-				url: 'http://angular-ui.github.io/bootstrap/'
+				title: 'Javascript.tw',
+				url: 'http://www.facebook.com/groups/javascript.tw/'
 			}, {
 				id: 3,
 				title: 'Plunker UI Code Tester',
@@ -18,12 +18,16 @@ SeedApp.service('LinkModel', function() {
 				url: 'https://mongolab.com/welcome/'
 			}, {
 				id: 5,
-				title: 'NodeJS Host',
-				url: 'https://www.nodejitsu.com'
+				title: 'NodeJS.tw/',
+				url: 'http://www.facebook.com/groups/node.js.tw/'
 			}, {
 				id: 6,
 				title: 'Twitter Bootstrap',
 				url: 'http://twitter.github.io/bootstrap/index.html'
+			}, {
+				id: 7,
+				title: 'Html5 CSS3 在台灣',
+				url: 'http://www.facebook.com/groups/htmlfive/'
 			}
 		]};
 	});			
