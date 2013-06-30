@@ -18,7 +18,6 @@ goto http://www.estimutt.com/SeedApp.html
 
 
 ### This Demo Requirements
-- PHP 5.x
 - Apache2 web server
 
 
