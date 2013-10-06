@@ -1,9 +1,9 @@
 SeedApp.service('LinkModel', function() {
 	this.getLinks = function() {
 
-                return $http.jsonp('http://localhost/rest/server.php/angularJS/technologies');
+                <!-- return $http.jsonp('http://localhost/rest/server.php/angularJS/technologies'); -->
 
-		<!-- return [{
+		return [{
 				id: 1,
 				title: 'AngularJS Home',
 				url: 'https://angularjs.org'
@@ -28,5 +28,5 @@ SeedApp.service('LinkModel', function() {
 				title: 'Twitter Bootstrap',
 				url: 'http://twitter.github.io/bootstrap/index.html'
 			}
-		]}; -->
+		]};
 	});			
