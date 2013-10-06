@@ -1,7 +1,7 @@
 <br />
 <ul>
-	<li ng-repeat='link in links | orderBy:"title"'>
-		<a href="{{link.url}}" target="_blank" ><b>{{link.title}}</b></a>
+	<li ng-repeat='link in links | orderBy:"technology_title"'>
+		<a href="{{link.technology_url}}" target="_blank" ><b>{{link.technology_title}}</b></a>
 		<p>{{link.summary}}</p>
 		<p>
 			<a href='#/link/{{link.id}}'>
