@@ -1,10 +1,9 @@
 <br />
 <ul>
 	<li ng-repeat='link in links | orderBy:"technology_title"'>
-		<a href="{{link.url}}" target="_blank" ><b>{{link.title}}</b></a>
-		<p>{{link.summary}}</p>
+		<a href="{{link.technology_url}}" target="_blank" ><b>{{link.technology_title}}</b></a>
 		<p>
-			<a href='#/link/{{link.id}}'>
+			<a href='#/link/{{link.technology_id}}'>
 				<ng-switch on='link.notes.length'>
 					<span ng-switch-when='0'>
 						
@@ -18,11 +17,11 @@
 				</ng-switch>
 			</a>
 			 
-			<a href='#/addNote/{{link.id}}'><button class="btn btn-medium">Add Note</button></a>
+			<a href='#/addNote/{{link.technology_id}}'><button class="btn btn-medium">Add Note</button></a>
 		</p>
 		<gb-note-list
 			notes='link.notes' 
-			show='link.id == selectedLinkId' 
+			show='link.technology_id == selectedLinkId' 
 			order-by='id' 
 			delete-note-handler='onDelete' 
 		/>
