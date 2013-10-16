@@ -1,7 +1,9 @@
 SeedApp.controller('LinksController', function ($scope, $location, $routeParams, LinkModel, NoteModel) {
+	
 	var links = LinkModel.getLinks();
+	
 	for (var i=0; i<links.length; i++) {
-		links[i].notes = NoteModel.getNotesForLink(links[i].id);
+		links[i].notes = NoteModel.getNotesForLink(links[i].technology_id);
 	}
 
 	$scope.links = links;
