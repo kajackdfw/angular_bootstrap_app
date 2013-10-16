@@ -1,5 +1,4 @@
-SeedApp.controller('AddNoteController',
-	function ($scope, $location, $routeParams, NoteModel, LinkModel ) {
+SeedApp.controller('AddNoteController', function ($scope, $location, $routeParams, NoteModel, LinkModel ) {
 		var linkId = $routeParams.linkId;
 
 		$scope.cancel = function() {
@@ -13,8 +12,8 @@ SeedApp.controller('AddNoteController',
 	}
 );
 
-SeedApp.controller('DeleteNoteController', 
-	function ($scope, $location, $routeParams, NoteModel) { 
+
+SeedApp.controller('DeleteNoteController', function ($scope, $location, $routeParams, NoteModel) { 
 		var linkId = $routeParams.linkId;
 		NoteModel.deleteNote(linkId, $routeParams.noteId);
 		$location.path('/link/' + linkId);
