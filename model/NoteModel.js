@@ -14,7 +14,7 @@ SeedApp.service('NoteModel', function() {
 		var link = JSON.parse(window.localStorage.getItem(linkId));
 
 		if (!link) {
-			link = { id: linkId, notes: [] }
+			link = { technology_id: linkId, notes: [] }
 		}
 
 		link.notes.push(note);
