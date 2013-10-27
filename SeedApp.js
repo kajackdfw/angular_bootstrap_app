@@ -39,5 +39,5 @@ var newConfig = function($routeProvider) {
 	;
 };
 
-var SeedApp = angular.module('SeedApp',[]).config(newConfig);
+var SeedApp = angular.module('SeedApp',['ngResource'] ).config(newConfig);
 
