@@ -1,6 +1,6 @@
 About This Demo / Site Template
 ---------------
-This project is intended to be a basic AngularJS site template for learning AngularJS basics in a Apache2 environment , 
+This project is intended to be a basic AngularJS version 1 site template for learning AngularJS basics in a Apache2 environment , 
 with working samples of some methods needed for a basic AngularJS Site with a user login, and with basic authorization for 
 Rest Services. An excellent reference for this app is the book "Instant AngularJS Starter" by 
 Dan Menard. His book describes in detail most of the basic methods used in this app, except for the Rest server and login.
